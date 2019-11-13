@@ -18,10 +18,14 @@ public class Welcome {
     }
 
     public String nextScreen(){
-        if(path.equals("1")){
-            return "register";
+        if(path != null){
+            if(path.equals("1")){
+                return "register";
+            }else{
+                return "login";
+            }
         }else{
-            return "login";
+            return "signIn";
         }
     }
 }

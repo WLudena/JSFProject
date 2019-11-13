@@ -5,7 +5,13 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:body>
-        <h1>Welcome New User</h1>
-    </h:body>
+    <ui:composition template="/WEB-INF/templates/template.xhtml">
+        <ui:define name="content">
+            <h1>Welcome New User</h1>
+            <h:form>
+                <h:commandButton value="Go to Welcome" action="signIn" />
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
 </html>
