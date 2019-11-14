@@ -1,6 +1,7 @@
 package com.sparta.wla.beans;
 
 import com.sparta.wla.components.User;
+import com.sparta.wla.persistence.PersistenceManager;
 import com.sparta.wla.services.LoginService;
 import com.sparta.wla.services.RegistrationService;
 
@@ -17,6 +18,8 @@ public class UserBean {
     private RegistrationService registrationService;
     @Inject
     private LoginService loginService;
+    @Inject
+    private PersistenceManager persistenceManager;
 
     private User user = new User();
 
@@ -25,7 +28,7 @@ public class UserBean {
     }
 
     public String registerNewUser(){
-        return  registrationService.registerUser(user);
+        return  registrationService.registerUser(persistenceManager.entityManager(),user);
     }
 
     public String validateUser(){
