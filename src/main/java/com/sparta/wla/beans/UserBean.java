@@ -8,7 +8,6 @@ import com.sparta.wla.services.RegistrationService;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.Index;
 
 @Named
 @RequestScoped
